@@ -42,6 +42,8 @@
       margin:0;
       font-family: 'Open Sans', sans-serif;
       cursor: default;
+      /* 마우스가 텍스트 위에 올라가도 
+      I 이렇게 안 뜨고 기본적인 커서 값이 지정됨*/
     }
   a{
       text-decoration: none;
@@ -53,6 +55,7 @@
         padding-left:0;
     }
     button{
+        /* 버튼의 기본적인 속성 없애기 */
         background-color: transparent;
         cursor: pointer;
         border:none;
@@ -91,21 +94,31 @@
   /* Navbar */
   #navbar {
     display:flex;
-    /* 박스가 양쪽에 나올 수 있도록 함 */
+    /* 박스div가 양쪽에 나올 수 있도록 함 */
    justify-content: space-between;
+   /* justify-content 는 가로축을 기준으로 좌우에 대한 정렬을 권장 */
+   /* justify-content: space-between; 요소들 사이에 동일한 간격을 둠
+   양쪽 끝을 붙일 상태에서 사이사이에 일정한 간격을 두기 위해서 좋음
+ */
+
    background-color:var(--color-pink);
     align-items: center;
+    /* 컨테이너의 세로축의 중앙으로 정렬함 */
     color:var(--color-white);
     padding:16px;
 }
 .navbar_menu{
     display: flex;
+     /* 박스div가 양쪽에 나란히 나올 수 있도록 함 */
+     /* 세로정렬을 가로정렬로 */
 
 }
 .navbar_menu_item{
-    padding: 12px 12px;
+    padding: 12px 12px; 
     margin:0 4px;
+    /* 패딩 마진 순서 위아래, 양옆 */
     cursor: pointer;
+    /* 마우스가 올라가면 손가락 모양으로 바뀜,사용자에게 클릭이 가능하다고 얘기해줌 */
     border-radius: var(--size-border-radius);
 }
 .navbar_logo{
@@ -124,16 +137,18 @@
 /* Home */
 #home{
     background:url("imgs/homebackground.png") center/cover no-repeat;
+    /*  center/cover 센터에다 두면서 반응형이 되도록 함 */
+    /* no-repeat 배경이미지가 반복되지 않도록 함 */
     padding:40px;
     text-align: center;
-
-
+    /* 모든 아이템을 화면의 중간으로 정렬 */
 }
 
 .home_avatar{
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    /* border-radius를 이용하여 50%를 지정하면 동그랗게 됨 */
     border: 2px solid var(--color-light-white) ;
 
 }
@@ -153,14 +168,29 @@
 /* Section common */
 .section {
     text-align: center;
+    /* 모든 아이템을 중간으로 정렬 */
     padding: 50px;
+    
+    margin: auto;
+    /* 마진이 오른쪽에만 적용되어 있어서
+      text-align: center; 가 되어있음에도
+      중간 정렬이 안됨 --> margin: auto; 쓰기 */
+}
+.section_container{
+    /* max-width를 지정하게 되면 화면을 늘렸을 때 배경이미지나 색깔이
+    더이상 늘어나지 않아 부담스러움
+    그래서 따로 max-width를 지정하고 싶은 부분에만 처리하기 위해 따로 뺌 */
     max-width: 1200px;
+    /* 최대너비 지정하여 화면이 커졌을 때 너무 늘어나보이지 않도록 함
+    1000-1200이 데스크탑에서 편하게 볼 수 있는 너비 */
     margin: auto;
 }
 /* About */
 .about_majors{
     margin: 80px 0;
     display: flex;
+     /* 박스div가 양쪽에 나란히 나올 수 있도록 함 */
+     /* 세로정렬을 가로정렬로 */
     justify-content: space-between;
 }
 .major_icon{
@@ -169,12 +199,16 @@
     font-size: 70px;
     color: var(--color-blue);
     line-height: 170px;
+    /*  line-height 을 높이만큼 지정하게 되면 자동으로 수직적으로 중간에 오게 됨 */
+    margin: auto;
     border: 1px solid var(--color-blue);
     border-radius: 50%;
     margin-bottom:16px ;
 }
 .major_icon i{
     transition:all  300ms ease;
+    /* 애니메이션을 주고 싶은 곳에 모든 속성값에서 300ms로 부드럽게 움직임
+    250ms-350ms가 애니메이션 주기 적당함 */
 }
 .major_icon:hover i{
     color:var(--color-pink);
@@ -204,4 +238,65 @@
 }
 .period{
     font-size: var(--font-micro);
+}
+
+/* Skills */
+#skills{
+    
+    background-color: var(--color-yellow);
+}
+.skill{
+    margin-bottom: 32px;
+}
+.skillset{
+    
+    margin: 20px 0;
+    color: var(--color-light-white);
+     display: flex; 
+    background-color: var(--color-light-grey);
+}
+.skillset_title{
+color: var(--color-light-white);
+}
+.skillset_left{
+
+padding:20px 40px;
+
+flex-basis: 60%;
+/* 컨텐츠 자체의 크기가 작아서 화면 차지를 못하는 애들을
+아이템별로 플렉스 베이스를 지정해줘서 
+각자 크기가 자동적으로 늘어날 수 있게 해줌*/
+background-color: var(--color-dark-grey);
+}
+.skill_description{
+    
+    display: flex;
+    justify-content: space-between;
+}
+.skill_bar{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+.skill_value{
+    /* width: 70%; */
+    /* 여기서 width를 지정하면 모든 프로그레스 바가 동일하게 지정되므로 
+    이 width는 html에서 정의해줘야 함 */
+    height: 3px;
+    background-color: var(--color-orange);
+
+}
+.skillset_right{
+flex-basis: 40%;
+/* 컨텐츠 자체의 크기가 작아서 화면 차지를 못하는 애들을
+아이템별로 플렉스 베이스를 지정해줘서 
+각자 크기가 자동적으로 늘어날 수 있게 해줌*/
+
+
+}
+.tools{
+    background-color: var(--color-grey);
+}
+.tools,.etc{
+    padding: 20px;
 }
