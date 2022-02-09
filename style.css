@@ -300,3 +300,113 @@ flex-basis: 40%;
 .tools,.etc{
     padding: 20px;
 }
+.tools_list li,.etc_list li{
+    font-size: var(--font-small);
+    margin: 5px;
+}
+/* Work */
+.category_btn{
+    border:1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding:8px 48px;
+
+}
+.work_categories{
+    margin: 40px;
+}
+.category_btn.active,
+.category_btn:hover{
+    color: var(--color-white);
+    background-color: var(--color-pink);
+}
+.category_btn.active .category_count,
+.category_btn:hover .category_count{
+    opacity: 1;
+    top:0;
+}
+.category_count{
+    background-color: var(--color-orange);
+    border-radius: 50px;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    /* span 태그는 inline이기 때문에 inline-block으로 바꿔줌 */
+    line-height: 24px;
+    /* 숫자를 수직적으로 중간으로 오게 하기 위해 */
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    /* 요소의 투명도 지정, 0은 완전 투명
+    기본값은 완전 불투명인 1로 지정되어있음 */
+    transition: all var(--animation-duration) ease;
+
+}
+.work_projects{
+    display: flex;
+    flex-wrap: wrap;
+    /* 아이템들이 꽉차면 자동으로 줄바꿈 시켜줌 */
+    justify-content: center;
+    /* 화면의 가운데로 정렬 */
+}
+.project{
+    position: relative;
+    width:200px;
+    height: 250px;
+    margin: 2px;
+    background-color:var(--color-light-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project_img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.project_description{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    /*  나란히 배치되어 있는 아이템들을
+    위에서 아래로 정렬되게끔 만들어줌 */
+    justify-content:center ;
+    /* 컨테이너의 세로축의 중앙으로 정렬 */
+background-color: black;
+    /* 부모노드 중에서 기본값인
+     스태틱이 아닌 부모를 찾아감 
+     결국 찾다찾다 바디 태그로 올라감
+     이를 방지하기 위해 부모 노드에 
+     position : relative; 지정해줘야함 */
+    opacity: 0;
+    transition: all var(--animation-duration);
+    transform: translateY(10px);
+    /* 요소의 표시위치를 y축으로 이동시킴
+    +값 아래쪽 -값 위쪽 */
+}
+    .project:hover .project_description{
+        opacity: 0.8;
+        transform: translateY(0px);
+    }
+.project_description h3{
+    color: var(--color-white);
+}
+.project_description h3:after{
+    /*꾸밈을 위해서 의미없는 태그를 
+    더 추가해야 될 때, 태그 대신에 
+    가상으로 처리해 줌 */
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    position: relative;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: 8px;
+    background-color: var(--color-dark-white);
+}
