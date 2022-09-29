@@ -7,12 +7,14 @@
     <title>dahyeon's portfolio</title>
 
     <meta name="description" content="portfolio for world-renowned software engineer">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="imgs/favicon.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+   
     <script src="main.js" defer></script>
 
 </head>
@@ -30,7 +32,6 @@
             <li class="navbar_menu_item">About</li>
             <li class="navbar_menu_item">Skills</li>
             <li class="navbar_menu_item">My work</li>
-            <li class="navbar_menu_item">Testimonials</li>
             <li class="navbar_menu_item">Contact</li>
         </ul>
      </div>
@@ -39,15 +40,15 @@
     <!-- Home -->
     <section id="home">
         <img src="imgs/me.jpg" alt="my profile photo" class="home_avatar" width="200px">
-        <h1 class="home_title">Hello, <br> I'm Dream Coder </h1>
-        <h2 class="home_description">I'm irreplaceable front-end engineer</h2>
+        <h1 class="home_title">Hello,  </h1>
+        <h2 class="home_description">I wanna be a irreplaceable front-end engineer</h2>
         <button class="home_contact">Contact me</button>
         </section>
 
     <!-- about -->
     <section id="about" class="section section_container">
         <h1>About me</h1>
-        <p>나를 소개하는 문장, 또는 경력, 자기 어필</p>
+        <!-- <p>나를 소개하는 문장, 또는 경력, 자기 어필</p> -->
         <div class="about_majors">
             <div class="major">
                 <div class="major_icon">
@@ -62,7 +63,7 @@
                     <i class="fab fa-brands fa-react"></i>
                 </div>
                 <h2 class="major_title">Frame work</h2>
-                <div class="major_description">react</div>
+                <div class="major_description">vue.js</div>
             </div>
 
             <div class="major">
@@ -70,7 +71,7 @@
                     <i class="far fa-window-maximize"></i>
                 </div>
                 <h2 class="major_title">etc</h2>
-                <div class="major_description">UI/UX</div>
+                <div class="major_description"></div>
             </div>
         </div>
         <div class="about_careers">
@@ -102,49 +103,49 @@
         </p>
         <div class="skillset">
             <div class="skillset_left">
-                <h3 class="skillset_title">Skills</h3>
+                <h2 class="skillset_title">Skills</h2>
                 <div class="skill">
                     <div class="skill_description">
                         <span>HTML</span>
-                        <span>99%</span>
+                        <span>80%</span>
                         <!-- PROGRESS bar 만드는 태그가 있긴 함! 
                             but 스타일링 하기 까다로워서 div 태그 두개 이용해서 만들자
                         -->
                     </div>
                     <div class="skill_bar">
-                        <div class="skill_value" style="width:99%"></div>
+                        <div class="skill_value" style="width:80%"></div>
                     </div>
                 </div>
 
                 <div class="skill">
                     <div class="skill_description">
                         <span>CSS</span>
-                        <span>95%</span>
+                        <span>80%</span>
                         <!-- PROGRESS bar 만드는 태그가 있긴 함! 
                             but 스타일링 하기 까다로워서 div 태그 두개 이용해서 만들자
                         -->
                     </div>
                     <div class="skill_bar">
-                        <div class="skill_value"style="width:95%"></div>
+                        <div class="skill_value"style="width:80%"></div>
                     </div>
                 </div>
 
                 <div class="skill">
                     <div class="skill_description">
                         <span>JAVASCRIPT</span>
-                        <span>90%</span>
+                        <span>70%</span>
                         <!-- PROGRESS bar 만드는 태그가 있긴 함! 
                             but 스타일링 하기 까다로워서 div 태그 두개 이용해서 만들자
                         -->
                     </div>
                     <div class="skill_bar">
-                        <div class="skill_value"style="width:90%"></div>
+                        <div class="skill_value"style="width:70%"></div>
                     </div>
                 </div>
 
                 <div class="skill">
                     <div class="skill_description">
-                        <span>TYPESCRIPT</span>
+                        <span>VUE.JS</span>
                         <span>50%</span>
                         <!-- PROGRESS bar 만드는 태그가 있긴 함! 
                             but 스타일링 하기 까다로워서 div 태그 두개 이용해서 만들자
@@ -155,35 +156,24 @@
                     </div>
                 </div>
 
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>REACT</span>
-                        <span>50%</span>
-                        <!-- PROGRESS bar 만드는 태그가 있긴 함! 
-                            but 스타일링 하기 까다로워서 div 태그 두개 이용해서 만들자
-                        -->
-                    </div>
-                    <div class="skill_bar">
-                        <div class="skill_value"style="width:50%"></div>
-                    </div>
-                </div>
+              
             </div>
 
             <div class="skillset_right">
                 <div class="tools">
-                    <h3 class="skillset_title">Tools</h3>
+                    <h2 class="skillset_title">Tools</h2>
                     <ul class="tools_list">
                         <li><span>Visual Studio Code</span></li>
-                        <li><span>Atom</span></li>
-                        <li><span>Visual Studio</span></li>
+                       
+                        
                       
                     </ul>
                 </div>
                 <div class="etc">
-                    <h3 class="skillset_title">Etc</h3>
+                    <h2 class="skillset_title">Etc</h2>
                     <ul class="etc_list">
                         <li><span>Git</span></li>
-                        <li><span>photoshop</span></li>
+                      
                       
                     </ul>
                 </div>
@@ -199,14 +189,12 @@
          <!--나중에 내가 한 프로젝트 카테고리화 하기 -->
         <div class="work_categories">
             <button class="category_btn active">All
-                <span class="category_count">8</span>
+                <span class="category_count">3</span>
             </button>
             <button class="category_btn">Web-page
                 <span class="category_count">3</span>
             </button>
-            <button class="category_btn">React
-                <span class="category_count">3</span>
-            </button>
+           
             <button class="category_btn">UI/UX
                 <span class="category_count">2</span>
             </button>
@@ -216,19 +204,7 @@
             <!-- 각각의 프로젝트는 누르면 깃허브 링크로도 연결이 되고
             마우스를 올리면 프로젝트에 대한 이름과 어떤 기술을 써서 만든 건지
             간략한 설명이 나오도록 만들자-->
-            <a href="https://github.com/judahhh/portfolio/commits/main" class="project" target="_blank">
-                <img class="project_img" 
-                src="imgs/project_image/1.jpg" 
-                alt="image" width="250px">
-                <div class="project_description">
-                    <h3>Youtube Site</h3>
-                    <span>Clone coding with HTML and CSS</span>
-                </div>
-                
-            </a>
-       
-
-        
+           
             <a href="https://github.com/judahhh/portfolio/commits/main" class="project" target="blank">
                 <img class="project_img" src="imgs/project_image/1.jpg" alt="image" width="250px">
                 <div class="project_description">
@@ -259,38 +235,15 @@
         </div>
     </section>
     
-    <!-- testimonials -->
-    <section id="testimonials" class="section">
-        <h1>Testimonials</h1>
-        <h3>See what they say about me</h3>
-        <div class="testimonials">
-            <div class="testimonial">
-                <img src="imgs/avatar.jpg" alt="avatar" class="testimonial_avatar">
-                <div class="testimonial_speech-bubble">
-                    <p>아무말이나 동료, 윗사람이 나에 대해서 한 말</p>
-                    <p class="name"><a href="">peter</a>/Samsung</p>
-                </div>
-
-            </div>
-
-            <div class="testimonial">
-                <img src="imgs/avatar.jpg" alt="avatar" class="testimonial_avatar">
-                <div class="testimonial_speech-bubble">
-                    <p>아무말이나 동료, 윗사람이 나에 대해서 한 말 2</p>
-                    <p class="name"><a href="">paker</a>/Naver</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+   
     
     <!-- contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" >
         <h1 class="contact_title">Let's talk</h1>
-        <h2 class="contact_email">jdh99080516@gmail.com</h2>
+        <h2 class="contact_email">jh06103@naver.com</h2>
         <div class="contact_links">
           <a href=" https://github.com/judahhh/portfolio" target="_blank">
-              <i class="fab fa-github"></i>
+            <button type="button" class="btn btn-dark">GITHUB</button>
           </a>
           <a href="#" target="_blank">
             <i class="fab fa-linkedin"></i>
